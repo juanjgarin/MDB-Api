@@ -1,0 +1,15 @@
+<br>
+<div class="row">
+    <div class="col">
+      <input
+        #clave
+        type="text"
+        (keyup)="search(clave.value)"
+        class="form-control"
+        placeholder="Pelicula que desea buscar..."
+      />
+    </div>
+  </div>
+  
+  <app-cards [items]="movies"></app-cards>
+   

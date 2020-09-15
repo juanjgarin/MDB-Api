@@ -1,0 +1,45 @@
+
+<br>
+<div class="container main-container animated fadeIn fast">
+
+    <div class="row">
+        
+        <div class="col-md-5" >
+
+            <img [src]='pelicula | peliculaImagen' class="img-thumbnail img-fluid">
+            
+
+        </div>
+        
+        <div class="col-md-7">
+
+            <h3>Sinopsis de {{pelicula.original_title}}</h3>
+            <hr>
+            <p class="text-justify">
+                {{ pelicula.overview }} 
+                <br>
+                <a href={{pelicula.homepage}}>Ver más...</a>
+            </p>
+            <hr>
+            <p>
+                Popularidad: <span class="badge badge-primary">{{ pelicula.popularity | number: '.0-0'}}/100</span>
+                <br>
+                Voto promedio: <span class="badge badge-primary">{{ pelicula.vote_average }}</span>
+            </p>
+
+            <div class="btn-group">
+
+                <button routerLink="/home" type="button" style="margin-left: 10px" class="btn btn-outline-danger">
+                    Volver al home
+                </button>
+                
+                <button routerLink="/search" type="button" class="btn btn-outline-danger">
+                    Ir a buscar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
